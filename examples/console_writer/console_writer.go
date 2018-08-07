@@ -19,8 +19,8 @@ type T struct {
 }
 
 // Fire .
-func (hook *MyHook) Fire(level log.LevelType, args ...interface{}) {
-	fmt.Println(args)
+func (hook *MyHook) Fire(level log.LevelType, m map[string]string, args ...interface{}) {
+	fmt.Println(m, args)
 }
 
 func main() {
